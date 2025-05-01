@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "omniai/llama"
+
+client = OmniAI::Llama::Client.new
+
+client.chat(stream: $stdout) do |prompt|
+  prompt.system "Respond in both English and French."
+  prompt.user "What is the fastest animal?"
+end
