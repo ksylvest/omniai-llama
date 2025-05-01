@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "omniai/llama"
+
+client = OmniAI::Llama::Client.new(logger: Logger.new($stdout))
+
+response = client.chat("Tell me a joke")
+puts response.text

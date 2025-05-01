@@ -1,0 +1,4 @@
+#!/bin/bash
+
+omniai chat "Who designed the Ruby programming language?"
+omniai chat --provider="llama" --model="Llama-4-Maverick-17B-128E-Instruct-FP8" "Who are you?"
